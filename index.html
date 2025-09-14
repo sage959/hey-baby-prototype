@@ -1,0 +1,510 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HeyBabyy - Your Baby Care Companion</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Opening Animation Screen -->
+    <div id="opening-screen" class="opening-screen">
+        <div class="typewriter-container">
+            <h1 id="typewriter-text" class="typewriter-text"></h1>
+            <div id="falling-dot" class="falling-dot">.</div>
+            <div id="semicolon" class="semicolon hidden">;</div>
+        </div>
+        <div id="cartoon-baby" class="cartoon-baby hidden">
+            <span class="baby-character">👶</span>
+        </div>
+        <div id="handprints" class="handprints hidden">
+            <span class="handprint left">🤚</span>
+            <span class="handprint right">🤚</span>
+        </div>
+    </div>
+
+    <!-- Language Selection Screen -->
+    <div id="language-screen" class="language-screen hidden">
+        <h2 class="language-title">Choose Your Language</h2>
+        <div class="language-bubbles">
+            <div class="bubble" data-lang="en">English</div>
+            <div class="bubble" data-lang="hi">हिंदी</div>
+            <div class="bubble" data-lang="bn">বাংলা</div>
+            <div class="bubble" data-lang="ta">தமிழ்</div>
+            <div class="bubble" data-lang="te">తెలుగు</div>
+            <div class="bubble" data-lang="gu">ગુજરાતી</div>
+            <div class="bubble" data-lang="kn">ಕನ್ನಡ</div>
+            <div class="bubble" data-lang="ml">മലയാളം</div>
+            <div class="bubble" data-lang="pa">ਪੰਜਾਬੀ</div>
+            <div class="bubble" data-lang="mr">मराठी</div>
+        </div>
+    </div>
+
+    <!-- Main Application -->
+    <div id="main-app" class="main-app hidden">
+        <!-- Header -->
+        <header class="header">
+            <div class="header-container">
+                <div class="logo">
+                    <span class="logo-text">HeyBabyy;</span>
+                    <span class="logo-hands">🤚🤚</span>
+                </div>
+                <nav class="main-nav">
+                    <a href="#" data-page="products">Products</a>
+                    <a href="#" data-page="services">Services</a>
+                    <a href="#" data-page="support">Support</a>
+                    <a href="#" data-page="insights">Insights</a>
+                    <a href="#" data-page="about">About Us</a>
+                </nav>
+                <div class="header-actions">
+                    <button class="btn-gradient" id="login-btn">Login/Register</button>
+                    <button class="hamburger" id="hamburger-btn">☰</button>
+                </div>
+            </div>
+        </header>
+
+        <!-- Hamburger Menu -->
+        <div id="hamburger-menu" class="hamburger-menu hidden">
+            <div class="hamburger-content">
+                <a href="#faqs" class="hamburger-item">FAQs</a>
+                <a href="#tips" class="hamburger-item">Tips</a>
+                <a href="#myth-breaker" class="hamburger-item">Myth Breaker</a>
+                <a href="#food-suggestions" class="hamburger-item">Basic Food Suggestions</a>
+                <a href="#hygiene-tips" class="hamburger-item">Hygiene Tips</a>
+                <a href="#who-guidelines" class="hamburger-item">WHO Guidelines</a>
+            </div>
+        </div>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <!-- Home Page -->
+            <div id="home-page" class="page active">
+                <div class="home-layout">
+                    <div class="chat-section">
+                        <div class="chat-header">
+                            <h3>Hi! I'm Tiny 🍼 - Your parenting assistant</h3>
+                        </div>
+                        <div class="chat-messages" id="chat-messages">
+                            <div class="message bot-message">
+                                <p>Welcome to HeyBabyy! I'm here to help you with all your parenting questions. How can I assist you today?</p>
+                            </div>
+                        </div>
+                        <div class="chat-input-container">
+                            <input type="text" id="chat-input" placeholder="Ask me anything about baby care..." class="chat-input">
+                            <button id="send-btn" class="send-btn">Send</button>
+                        </div>
+                    </div>
+                    <div class="quick-actions">
+                        <h4>Quick Actions</h4>
+                        <div class="action-card" data-action="growth-tracker">
+                            <span class="action-icon">📊</span>
+                            <span class="action-text">Growth Tracker</span>
+                        </div>
+                        <div class="action-card" data-action="feeding-log">
+                            <span class="action-icon">🍼</span>
+                            <span class="action-text">Feeding Log</span>
+                        </div>
+                        <div class="action-card" data-action="find-services">
+                            <span class="action-icon">🗺️</span>
+                            <span class="action-text">Find Services</span>
+                        </div>
+                        <div class="action-card" data-action="reminders">
+                            <span class="action-icon">⏰</span>
+                            <span class="action-text">Reminders</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Content Sections -->
+                <div class="content-sections">
+                    <section id="faqs" class="content-section">
+                        <h3>Frequently Asked Questions</h3>
+                        <div class="faq-list">
+                            <div class="faq-item">
+                                <h4>When should I start solid foods?</h4>
+                                <p>Most babies are ready for solid foods around 6 months of age, when they can sit up with support and show interest in food.</p>
+                            </div>
+                            <div class="faq-item">
+                                <h4>How often should I feed my newborn?</h4>
+                                <p>Newborns typically need to feed every 2-3 hours, or 8-12 times per day. Follow your baby's hunger cues.</p>
+                            </div>
+                        </div>
+                    </section>
+
+                    <section id="tips" class="content-section">
+                        <h3>Parenting Tips</h3>
+                        <div class="tips-grid">
+                            <div class="tip-card">
+                                <h4>Sleep Schedule</h4>
+                                <p>Establish a consistent bedtime routine to help your baby develop healthy sleep patterns.</p>
+                            </div>
+                            <div class="tip-card">
+                                <h4>Bonding Time</h4>
+                                <p>Skin-to-skin contact and talking to your baby helps with emotional development and bonding.</p>
+                            </div>
+                        </div>
+                    </section>
+
+                    <section id="myth-breaker" class="content-section">
+                        <h3>Myth Breaker</h3>
+                        <div class="myth-list">
+                            <div class="myth-item">
+                                <h4>Myth: Babies need water in hot weather</h4>
+                                <p>Fact: Breast milk or formula provides all the hydration babies need in their first 6 months.</p>
+                            </div>
+                        </div>
+                    </section>
+
+                    <section id="food-suggestions" class="content-section">
+                        <h3>Basic Food Suggestions</h3>
+                        <div class="food-timeline">
+                            <div class="food-stage">
+                                <h4>6-8 months</h4>
+                                <p>Single ingredient purees: sweet potato, banana, avocado</p>
+                            </div>
+                            <div class="food-stage">
+                                <h4>8-10 months</h4>
+                                <p>Combination foods and soft finger foods</p>
+                            </div>
+                        </div>
+                    </section>
+
+                    <section id="hygiene-tips" class="content-section">
+                        <h3>Hygiene Tips</h3>
+                        <div class="hygiene-list">
+                            <div class="hygiene-item">
+                                <h4>Hand Washing</h4>
+                                <p>Always wash hands before handling your baby or preparing food.</p>
+                            </div>
+                            <div class="hygiene-item">
+                                <h4>Diaper Care</h4>
+                                <p>Change diapers frequently and clean thoroughly to prevent rashes.</p>
+                            </div>
+                        </div>
+                    </section>
+
+                    <section id="who-guidelines" class="content-section">
+                        <h3>WHO Guidelines</h3>
+                        <div class="guideline-list">
+                            <div class="guideline-item">
+                                <h4>Exclusive Breastfeeding</h4>
+                                <p>WHO recommends exclusive breastfeeding for the first 6 months of life.</p>
+                            </div>
+                            <div class="guideline-item">
+                                <h4>Vaccination Schedule</h4>
+                                <p>Follow the immunization schedule recommended by WHO and your healthcare provider.</p>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+            </div>
+
+            <!-- Services Page -->
+            <div id="services-page" class="page">
+                <div class="services-header">
+                    <h2>Our Services</h2>
+                    <p>Comprehensive care for you and your baby</p>
+                </div>
+                <div class="services-grid">
+                    <div class="service-card" data-service="consultant">
+                        <div class="service-icon">🤖</div>
+                        <h3>Virtual Consultant</h3>
+                        <p>AI-powered parenting guidance available 24/7</p>
+                    </div>
+                    <div class="service-card" data-service="map">
+                        <div class="service-icon">🗺️</div>
+                        <h3>Map Services</h3>
+                        <p>Find nearby healthcare facilities and services</p>
+                        <div class="map-options">
+                            <div class="map-option">🏠 Creches</div>
+                            <div class="map-option">💉 Vaccination Centers</div>
+                            <div class="map-option">🎓 Preschools</div>
+                            <div class="map-option">👨‍⚕️ Pediatricians</div>
+                            <div class="map-option">🤱 Lactation Consultants</div>
+                            <div class="map-option">🩸 Blood Banks</div>
+                        </div>
+                    </div>
+                    <div class="service-card" data-service="growth">
+                        <div class="service-icon">📊</div>
+                        <h3>Growth Monitor</h3>
+                        <p>Track your baby's development milestones</p>
+                    </div>
+                    <div class="service-card" data-service="nutrition">
+                        <div class="service-icon">🍼</div>
+                        <h3>Nutrition Tracker</h3>
+                        <p>Monitor feeding schedules and nutrition</p>
+                    </div>
+                    <div class="service-card" data-service="reminders">
+                        <div class="service-icon">⏰</div>
+                        <h3>Daily Health Checkup Reminders</h3>
+                        <p>Never miss important healthcare appointments</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Products Page -->
+            <div id="products-page" class="page">
+                <div class="products-header">
+                    <h2>Products</h2>
+                    <p>Curated products for your baby's needs</p>
+                </div>
+                <div class="products-grid">
+                    <div class="product-card">
+                        <div class="product-icon">🍼</div>
+                        <h3>Feeding Essentials</h3>
+                        <p>Bottles, sippy cups, and feeding accessories</p>
+                    </div>
+                    <div class="product-card">
+                        <div class="product-icon">👶</div>
+                        <h3>Baby Care</h3>
+                        <p>Diapers, wipes, and hygiene products</p>
+                    </div>
+                    <div class="product-card">
+                        <div class="product-icon">🧸</div>
+                        <h3>Toys & Development</h3>
+                        <p>Age-appropriate toys for learning and fun</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Support Page -->
+            <div id="support-page" class="page">
+                <div class="support-header">
+                    <h2>Support</h2>
+                    <p>We're here to help you every step of the way</p>
+                </div>
+                <div class="support-options">
+                    <div class="support-card">
+                        <h3>24/7 Chat Support</h3>
+                        <p>Get instant help from our support team</p>
+                        <button class="btn-gradient">Start Chat</button>
+                    </div>
+                    <div class="support-card">
+                        <h3>Expert Consultation</h3>
+                        <p>Schedule a call with our pediatric experts</p>
+                        <button class="btn-gradient">Book Consultation</button>
+                    </div>
+                    <div class="support-card">
+                        <h3>Community Forum</h3>
+                        <p>Connect with other parents and share experiences</p>
+                        <button class="btn-gradient">Join Community</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Insights Page -->
+            <div id="insights-page" class="page">
+                <div class="insights-header">
+                    <h2>Insights & Articles</h2>
+                    <p>Expert advice and latest research for new parents</p>
+                </div>
+                <div class="insights-grid">
+                    <div class="insight-card">
+                        <h3>First 1000 Days</h3>
+                        <p>Understanding the critical importance of your baby's first 1000 days</p>
+                        <span class="premium-badge">Premium</span>
+                    </div>
+                    <div class="insight-card">
+                        <h3>Sleep Training Guide</h3>
+                        <p>Gentle methods to help your baby sleep through the night</p>
+                        <span class="free-badge">Free</span>
+                    </div>
+                    <div class="insight-card">
+                        <h3>Milestone Tracking</h3>
+                        <p>What to expect in your baby's development journey</p>
+                        <span class="premium-badge">Premium</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- About Page -->
+            <div id="about-page" class="page">
+                <div class="about-header">
+                    <h2>About HeyBabyy</h2>
+                    <p>Your trusted companion for baby's first 1000 days</p>
+                </div>
+                <div class="about-content">
+                    <div class="about-section">
+                        <h3>Our Mission</h3>
+                        <p>To support new parents with evidence-based guidance, tools, and community support during the most important phase of their baby's development.</p>
+                    </div>
+                    <div class="about-section">
+                        <h3>Our Team</h3>
+                        <p>A dedicated team of pediatricians, nutritionists, and child development experts committed to your family's wellbeing.</p>
+                    </div>
+                    <div class="about-section">
+                        <h3>Contact Us</h3>
+                        <p>Email: support@heybabyy.com<br>Phone: +91 98765 43210</p>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <div class="footer-content">
+                <div class="footer-links">
+                    <a href="#" data-page="home">Home</a>
+                    <a href="#" data-page="services">Services</a>
+                    <a href="#" data-page="support">Contacts</a>
+                    <a href="#" data-page="about">About Us</a>
+                </div>
+                <div class="social-links">
+                    <a href="#" target="_blank">📘</a>
+                    <a href="#" target="_blank">📷</a>
+                    <a href="#" target="_blank">🐦</a>
+                    <a href="#" target="_blank">▶️</a>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <!-- Login/Register Modal -->
+    <div id="auth-modal" class="modal hidden">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3 id="auth-title">Login to HeyBabyy</h3>
+                <button class="close-btn" id="close-auth">&times;</button>
+            </div>
+            <div class="modal-body">
+                <!-- Login Form -->
+                <div id="login-form" class="auth-form">
+                    <div class="form-group">
+                        <label for="phone">Phone Number</label>
+                        <input type="tel" id="phone" class="form-control" placeholder="+91 98765 43210">
+                    </div>
+                    <button class="btn-gradient full-width" id="send-otp">Send OTP</button>
+                    <div class="form-group hidden" id="otp-group">
+                        <label for="otp">Enter OTP</label>
+                        <input type="text" id="otp" class="form-control" placeholder="123456">
+                        <button class="btn-gradient full-width" id="verify-otp">Verify OTP</button>
+                    </div>
+                    <p class="auth-switch">Don't have an account? <a href="#" id="switch-to-register">Register here</a></p>
+                </div>
+
+                <!-- Registration Form -->
+                <div id="register-form" class="auth-form hidden">
+                    <div class="registration-steps">
+                        <!-- Step 1: Parent Details -->
+                        <div id="step1" class="step active">
+                            <h4>Parent Details</h4>
+                            <div class="parent-details">
+                                <h5>Mother's Details</h5>
+                                <div class="form-row">
+                                    <input type="text" placeholder="Name" class="form-control">
+                                    <input type="email" placeholder="Email" class="form-control">
+                                </div>
+                                <div class="form-row">
+                                    <input type="date" placeholder="Date of Birth" class="form-control">
+                                    <input type="tel" placeholder="Phone" class="form-control">
+                                </div>
+                                <div class="form-row">
+                                    <select class="form-control">
+                                        <option>Blood Group</option>
+                                        <option>A+</option>
+                                        <option>A-</option>
+                                        <option>B+</option>
+                                        <option>B-</option>
+                                        <option>AB+</option>
+                                        <option>AB-</option>
+                                        <option>O+</option>
+                                        <option>O-</option>
+                                    </select>
+                                    <input type="text" placeholder="Location" class="form-control">
+                                </div>
+                                <textarea placeholder="Health History (Optional)" class="form-control"></textarea>
+
+                                <h5>Father's Details</h5>
+                                <div class="form-row">
+                                    <input type="text" placeholder="Name" class="form-control">
+                                    <input type="email" placeholder="Email" class="form-control">
+                                </div>
+                                <div class="form-row">
+                                    <input type="date" placeholder="Date of Birth" class="form-control">
+                                    <input type="tel" placeholder="Phone" class="form-control">
+                                </div>
+                                <div class="form-row">
+                                    <select class="form-control">
+                                        <option>Blood Group</option>
+                                        <option>A+</option>
+                                        <option>A-</option>
+                                        <option>B+</option>
+                                        <option>B-</option>
+                                        <option>AB+</option>
+                                        <option>AB-</option>
+                                        <option>O+</option>
+                                        <option>O-</option>
+                                    </select>
+                                    <input type="text" placeholder="Location" class="form-control">
+                                </div>
+                                <textarea placeholder="Health History (Optional)" class="form-control"></textarea>
+                                
+                                <div class="form-group">
+                                    <label for="prescription">Upload Doctor's Prescription (Optional)</label>
+                                    <input type="file" id="prescription" class="form-control" accept=".pdf,.jpg,.png">
+                                </div>
+                            </div>
+                            <button class="btn-gradient full-width" id="next-step">Next: Baby Details</button>
+                        </div>
+
+                        <!-- Step 2: Baby Details -->
+                        <div id="step2" class="step">
+                            <h4>Baby Details</h4>
+                            <div class="form-row">
+                                <input type="text" placeholder="Baby's Name" class="form-control">
+                                <input type="date" placeholder="Date of Birth" class="form-control">
+                            </div>
+                            <div class="form-row">
+                                <input type="time" placeholder="Birth Time (Optional)" class="form-control">
+                                <select class="form-control">
+                                    <option>Gender</option>
+                                    <option>Male</option>
+                                    <option>Female</option>
+                                    <option>Prefer not to say</option>
+                                </select>
+                            </div>
+                            <div class="form-row">
+                                <input type="number" placeholder="Height (cm)" class="form-control">
+                                <input type="number" placeholder="Weight (kg)" class="form-control">
+                            </div>
+                            <div class="form-row">
+                                <select class="form-control">
+                                    <option>Blood Group</option>
+                                    <option>A+</option>
+                                    <option>A-</option>
+                                    <option>B+</option>
+                                    <option>B-</option>
+                                    <option>AB+</option>
+                                    <option>AB-</option>
+                                    <option>O+</option>
+                                    <option>O-</option>
+                                </select>
+                                <input type="text" placeholder="Eyesight (Optional)" class="form-control">
+                            </div>
+                            <div class="form-group">
+                                <label for="vaccination-records">Vaccination Records (Optional)</label>
+                                <input type="file" id="vaccination-records" class="form-control" accept=".pdf,.jpg,.png">
+                            </div>
+                            <textarea placeholder="Sibling Data (Optional)" class="form-control"></textarea>
+                            <div class="step-buttons">
+                                <button class="btn-outline" id="prev-step">Previous</button>
+                                <button class="btn-gradient" id="complete-registration">Complete Registration</button>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="auth-switch">Already have an account? <a href="#" id="switch-to-login">Login here</a></p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- TinySpeaks Voice Assistant -->
+    <button id="tiny-speaks" class="tiny-speaks">
+        <span class="voice-icon">🎙️</span>
+        <span class="tiny-text">TinySpeaks</span>
+    </button>
+
+    <script src="app.js"></script>
+</body>
+</html>
